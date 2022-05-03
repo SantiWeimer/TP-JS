@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios js</title>
+    <script src="../assets/js/functions.js"></script>
 </head>
 <body>
     
@@ -20,12 +21,12 @@
 <input type="number" id="ej1_c1">
 
 <label for="ej1_c2">Numero 2</label>
-<input type="number" id="ej1_c3">
+<input type="number" id="ej1_c2">
 
 <label for="ej1_c3">Numero 3</label>
 <input type="number" id="ej1_c3">
 
-<button onclick="func_ej1">Comparar</button>
+<button onclick="func_ej1()">Comparar</button>
 
 <label for="ej1_resultado">Resultado</label>
 <input type="text" id="ej1_resultado">
@@ -43,7 +44,7 @@
 <label for="ej2_c2">Numero 2</label>
 <input type="number" id="ej2_c2">
 
-<button onclick="func_ej2">Comparar</button>
+<button onclick="func_ej2()">Sumar</button>
 
 <label for="ej2_resultado">Resultado</label>
 <input type="text" id="ej2_resultado">
@@ -61,7 +62,7 @@
 <label for="ej3_c2">Numero de repeticiones</label>
 <input type="number" id="ej3_c2">
 
-<button onclick="func_ej3">Comparar</button>
+<button onclick="func_ej3()">Repetir</button>
 
 <label for="ej3_resultado">Resultado</label>
 <input type="text" id="ej2_resultado">
@@ -74,7 +75,7 @@
 <label for="ej4_c2">Grados celsius</label>
 <input type="number" id="ej4_c1">
 
-<button onclick="func_ej4">Convertir</button>
+<button onclick="func_ej4()">Convertir</button>
 
 <label for="ej4_resultado">Resultado</label>
 <input type="text" id="ej4_resultado">
@@ -111,34 +112,9 @@
 
 
 
+
+
 <script>
-
-    //Formula para ejercicio 1
-
-   function func_ej1(){
-
-
-    let ej1_c1 = parseFloat(document.getElementById('ej1_c1').value);
-    let ej1_c2 = parseFloat(document.getElementById('ej1_c2').value);
-    let ej1_c3 = parseFloat(document.getElementById('ej1_c3').value);
-
-
-    if (ej1_c1 > ej1_c2 && ej1_c1 > ej1_c3) 
-
-    else
-
-     if (ej1_c2 > ej1_c1 && ej1_c2 > ej1_c3)
-
-     else
-
-     
-    
-
-
-
-
-   }
-
 
    //Formula para ejercicio 2
 
@@ -146,8 +122,10 @@
 
     let ej1_c1 = parseFloat(document.getElementById('ej2_c1').value);
     let ej1_c2 = parseFloat(document.getElementById('ej2_c2').value);
+    let suma = ""
 
-    const suma = ej2_c1 + ej2_c2;
+    suma = (ej2_c1 + ej2_c2);
+    
     document.getElementById('ej2_resultado').value = suma;
 
    }
@@ -162,7 +140,7 @@
     let ej3_c2 = document.getElementById('ej3_c2').value;
 
     const res_ej3 = ej3_c1 * ej3_c2;
-    document.getElementById('ej2_resultado').value = res_ej3;
+    document.getElementById('ej3_resultado').value = res_ej3;
     
    }
 
@@ -175,7 +153,7 @@
     let ej4_c1 = parseFloat(document.getElementById('ej4_c1').value);
 
     const res_ej4 = (ej4_c1 * 9/5) + 32;
-    document.getElementById('ej2_resultado').value = res_ej4;
+    document.getElementById('ej4_resultado').value = res_ej4;
 
    }
 
